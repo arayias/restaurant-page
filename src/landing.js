@@ -1,5 +1,6 @@
 import "./style.css";
 import { home } from "./home";
+import { menu } from "./menu";
 
 const landing = () => {
   const body = document.querySelector("body");
@@ -7,8 +8,6 @@ const landing = () => {
   const header = document.createElement("header");
   const content = document.createElement("div");
   content.setAttribute("id", "content");
-
-  content.appendChild(home());
 
   main.appendChild(content);
   header.appendChild(headerContent());

@@ -17,6 +17,10 @@ body {
   margin: 0 auto;
   background-color: beige;
 }
+header {
+  position: relative;
+  z-index: 2;
+}
 
 .nav-grid {
   display: grid;
@@ -49,7 +53,7 @@ body {
 
 #content {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   margin-top: -1em;
   padding: 1em;
   border: none;
@@ -92,6 +96,48 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.menu-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.menu-item {
+  position: relative;
+  flex: 1 1 clamp(200px, 45%, 400px);
+  margin: 0.5em;
+  padding: 0.5em;
+  border: none;
+  border-radius: 1em;
+  background-color: var(--main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: rgb(233, 230, 225);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  opacity: 0.7;
+}
+
+.menu-item.popular h3::after {
+  position: absolute;
+  content: "🔥";
+  top: 10%;
+  left: 15%;
+}
+
+.menu-item h3 {
+  border-bottom: 2px solid rgb(233, 230, 225);
+  padding-bottom: 0.2em;
 }
 
 @media screen and (max-width: 768px) {
