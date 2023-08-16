@@ -44,12 +44,16 @@ header {
   padding: 7%;
   border-radius: 1em;
   background-color: antiquewhite;
-  transition: opacity 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .nav-item:hover {
-  opacity: 0.7;
+  background-color: var(--complementary-color);
+}
+
+.nav-item.active {
+  background-color: var(--complementary-color);
 }
 
 #content {

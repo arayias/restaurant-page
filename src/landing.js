@@ -1,7 +1,4 @@
 import "./style.css";
-import { home } from "./home";
-import { menu } from "./menu";
-
 const landing = () => {
   const body = document.querySelector("body");
   const main = document.createElement("main");
@@ -25,7 +22,7 @@ const headerContent = () => {
   const contact = document.createElement("div");
 
   home.textContent = "Home";
-  home.classList.add("nav-home", "nav-item");
+  home.classList.add("nav-home", "nav-item", "active");
 
   menu.textContent = "Menu";
   menu.classList.add("nav-menu", "nav-item");
