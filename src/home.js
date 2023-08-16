@@ -12,11 +12,21 @@ const home = () => {
   homeGrid.classList.add("home-grid");
   const gridText = document.createElement("div");
   gridText.classList.add("grid-text");
-  const gridImage = new Image();
-  gridImage.classList.add("grid-image");
-  gridImage.src = tea;
+  const gridImageTea = new Image();
+  gridImageTea.classList.add("grid-image");
+  gridImageTea.src = tea;
+  gridImageTea.alt = "tea";
+  const gridImageOrganic = new Image();
+  gridImageOrganic.classList.add("grid-image");
+  gridImageOrganic.src = organic;
+  gridImageOrganic.alt = "organic sourcing of tea";
   gridText.textContent = `lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris`;
+  homeGrid.appendChild(gridText);
+  homeGrid.appendChild(gridImageTea);
+  homeGrid.appendChild(gridImageOrganic);
+  homeGrid.appendChild(gridText.cloneNode(true));
 
+  home.appendChild(homeGrid);
   return home;
 };
 
