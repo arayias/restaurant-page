@@ -17,6 +17,7 @@ body {
   margin: 0 auto;
   background-color: beige;
 }
+
 header {
   position: relative;
   z-index: 2;
@@ -140,6 +141,44 @@ header {
   padding-bottom: 0.2em;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0.5em;
+  background-color: var(--main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
+.contact img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h3 {
+  width: 25ch;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   body {
     width: 90%;
@@ -147,5 +186,9 @@ header {
 
   .home-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .contact h3 {
+    width: 15ch;
+    text-align: center;
   }
 }
