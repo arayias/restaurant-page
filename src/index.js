@@ -1,6 +1,4 @@
-const mainContent = document.createElement("div");
-mainContent.attributes.id = "main-content";
-mainContent.innerHTML = `
-hello world! `;
+import { landing } from "./landing";
+import "./style.css";
 
-document.body.appendChild(mainContent);
+landing();
